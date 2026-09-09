@@ -1,0 +1,36 @@
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-6);
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.center p {
+  margin-inline: auto;
+}
+
+.title {
+  font-size: var(--text-xl);
+  max-width: 24ch;
+}
+
+.center .title {
+  margin-inline: auto;
+}
+
+.lead {
+  margin-top: var(--space-3);
+  max-width: 56ch;
+  color: var(--color-ink-soft);
+}
+
+:global(.section--brand) .lead {
+  color: var(--color-on-brand-soft);
+}

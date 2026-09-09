@@ -1,0 +1,130 @@
+.story {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.text {
+  display: grid;
+  gap: var(--space-4);
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+}
+
+.credentials {
+  align-self: start;
+  padding: var(--space-5);
+  background: var(--color-brand-soft);
+  border-radius: var(--radius-md);
+  font-size: var(--text-sm);
+}
+
+.credentials li {
+  position: relative;
+  padding: var(--space-2) 0 var(--space-2) var(--space-5);
+  border-bottom: 1px solid rgba(15, 61, 74, 0.12);
+}
+
+.credentials li:last-child {
+  border-bottom: 0;
+}
+
+.credentials li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 1.05em;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-brand);
+}
+
+.statsBand {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.stats dd {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.stats dt {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-on-brand-soft);
+}
+
+.values,
+.team {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.value {
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-brand);
+}
+
+.value p {
+  margin-top: var(--space-2);
+  color: var(--color-ink-soft);
+}
+
+.person {
+  padding: var(--space-6);
+  background: var(--color-bg);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.initials {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  margin-bottom: var(--space-4);
+  border-radius: 50%;
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+  font-weight: 700;
+}
+
+.role {
+  margin-block: var(--space-1) var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-brand);
+}
+
+.bio {
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 40em) {
+  .values,
+  .team {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .story {
+    grid-template-columns: 7fr 4fr;
+    gap: var(--space-9);
+  }
+}

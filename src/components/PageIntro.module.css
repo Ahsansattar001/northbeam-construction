@@ -1,0 +1,22 @@
+.intro {
+  padding-block: var(--space-7);
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+.title {
+  font-size: var(--text-2xl);
+}
+
+.lead {
+  margin-top: var(--space-4);
+  max-width: 52ch;
+  font-size: var(--text-md);
+  color: var(--color-on-brand-soft);
+}
+
+@media (min-width: 60em) {
+  .intro {
+    padding-block: var(--space-8);
+  }
+}

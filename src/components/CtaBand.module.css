@@ -1,0 +1,35 @@
+.band {
+  padding-block: var(--space-8);
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+.inner {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.title {
+  font-size: var(--text-xl);
+  max-width: 18ch;
+}
+
+.lead {
+  margin-top: var(--space-3);
+  max-width: 44ch;
+  color: var(--color-on-brand-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (min-width: 60em) {
+  .inner {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-8);
+  }
+}

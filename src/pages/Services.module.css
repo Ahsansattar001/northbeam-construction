@@ -1,0 +1,37 @@
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.included {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.item {
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--color-brand);
+}
+
+.item p {
+  margin-top: var(--space-2);
+  font-size: var(--text-sm);
+  color: var(--color-ink-soft);
+}
+
+@media (min-width: 40em) {
+  .grid,
+  .included {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .included {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

@@ -1,0 +1,124 @@
+.footer {
+  padding-block: var(--space-8) var(--space-6);
+  background: var(--color-brand-deep);
+  color: var(--color-on-brand-soft);
+  font-size: var(--text-sm);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.about p {
+  max-width: 36ch;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+  font-weight: 700;
+  font-size: var(--text-md);
+  color: var(--color-on-brand);
+  text-decoration: none;
+}
+
+.contact {
+  margin-top: var(--space-4);
+}
+
+.contact li {
+  margin-bottom: var(--space-1);
+}
+
+.contact a,
+.list a {
+  text-decoration: none;
+  transition: color var(--duration) var(--ease);
+}
+
+.contact a:hover,
+.list a:hover {
+  color: var(--color-on-brand);
+}
+
+.heading {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-on-brand);
+}
+
+.list li {
+  margin-bottom: var(--space-2);
+}
+
+.small {
+  font-size: var(--text-xs);
+  min-height: 1.4em;
+}
+
+.form {
+  display: flex;
+  gap: var(--space-2);
+  margin-block: var(--space-3);
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  min-height: 2.5rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-on-brand);
+}
+
+.input::placeholder {
+  color: var(--color-on-brand-soft);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+.submit {
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  background: var(--color-accent);
+  color: var(--color-ink);
+  font-weight: 600;
+  transition: background-color var(--duration) var(--ease);
+}
+
+.submit:hover {
+  background: var(--color-accent-deep);
+}
+
+.bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: var(--text-xs);
+}
+
+@media (min-width: 40em) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 60em) {
+  .grid {
+    grid-template-columns: 1.7fr 1fr 1fr 1.3fr;
+    gap: var(--space-8);
+  }
+}

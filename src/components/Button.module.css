@@ -1,0 +1,68 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background-color var(--duration) var(--ease),
+              color var(--duration) var(--ease),
+              border-color var(--duration) var(--ease);
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+/* Amber: the single most important action on a page */
+.accent {
+  background: var(--color-accent);
+  color: var(--color-ink);
+}
+
+.accent:hover:not(:disabled) {
+  background: var(--color-accent-deep);
+}
+
+/* Teal: primary action on light backgrounds */
+.primary {
+  background: var(--color-brand);
+  color: var(--color-on-brand);
+}
+
+.primary:hover:not(:disabled) {
+  background: var(--color-brand-deep);
+}
+
+/* Outlined, for a secondary action on light backgrounds */
+.secondary {
+  border-color: var(--color-line);
+  color: var(--color-ink);
+}
+
+.secondary:hover {
+  border-color: var(--color-ink);
+}
+
+/* Outlined, for a secondary action on the teal background */
+.ghost {
+  border-color: rgba(255, 255, 255, 0.35);
+  color: var(--color-on-brand);
+}
+
+.ghost:hover {
+  border-color: var(--color-on-brand);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.large {
+  min-height: 3.25rem;
+  padding-inline: var(--space-6);
+  font-size: var(--text-base);
+}
